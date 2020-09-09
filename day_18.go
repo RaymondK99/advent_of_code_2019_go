@@ -178,13 +178,8 @@ func day18Part1(input string) string {
 			} else {
 				//fmt.Println("Node is visited:",next_node)
 			}
-
-
 		}
-
-
 	}
 
-
-	return ""
+	return "No solution"
 }
