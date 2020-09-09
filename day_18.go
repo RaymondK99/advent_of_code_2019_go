@@ -183,7 +183,7 @@ func day18Part1(input string) string {
 		}
 
 
-		}
+	}
 
 
 	return ""

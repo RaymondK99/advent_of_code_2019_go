@@ -19,7 +19,7 @@ func readInput() string {
 
 func main() {
 
-	if len(os.Args) < 3 {
+	if len(os.Args) < 4 {
 		os.Exit(1)
 	}
 
@@ -27,6 +27,8 @@ func main() {
 	argsWithoutProg := os.Args[1:]
 	day,_ := strconv.Atoi(argsWithoutProg[0])
 	part,_:= strconv.Atoi(argsWithoutProg[1])
+	year,_:= strconv.Atoi(argsWithoutProg[2])
+
 
 	// Read input data
 	input := readInput()
@@ -35,7 +37,11 @@ func main() {
 	switch day {
 	case 1:
 		if part == 1 {
-			res = day1Part1(input)
+			if year == 2017 {
+				res = day1Part1_2017(input)
+			} else {
+				res = day1Part1(input)
+			}
 		} else if part == 2 {
 			res = day1Part2(input)
 		}
