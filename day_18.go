@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"sort"
 	"strings"
+	"strconv"
 )
 
 type Pos struct {
@@ -107,7 +108,7 @@ func day18Part1(input string) string {
 		}
 	}
 
-	fmt.Println("start node:",start_pos,", num keys=",num_keys)
+	//fmt.Println("start node:",start_pos,", num keys=",num_keys)
 
 	// Create first node
 	start_node := Node{pos:start_pos, distance: 0,keys:""}
@@ -137,7 +138,8 @@ func day18Part1(input string) string {
 			// Found solution
 			fmt.Println("Found keys:",len(node.keys)," num_keys:",num_keys)
 			fmt.Println("Found solution at dist:", node.distance)
-			break
+
+			return strconv.Itoa(node.distance)
 		}
 
 		// Generate neighbors
